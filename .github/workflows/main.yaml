@@ -1,7 +1,5 @@
 name: Runner
 
 on: [push]
-
-jobs:
-  build:
-    runs-on: self-hosted
+env: 
+  runs-on: self-hosted
