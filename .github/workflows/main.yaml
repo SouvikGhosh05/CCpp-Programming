@@ -1,1 +1,7 @@
-runs-on: self-hosted
+name: Runner
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
