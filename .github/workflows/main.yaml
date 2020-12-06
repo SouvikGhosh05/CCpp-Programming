@@ -1,5 +1,0 @@
-name: Runner
-
-on: [push]
-env: 
-  runs-on: self-hosted
