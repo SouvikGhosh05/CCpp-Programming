@@ -20,7 +20,7 @@ void InsertionSort(int A[],int n)
 
 int main()
 {
-    int *p, arr, num ,i;
+    int *p, num ,i;
     
     std:: cout<<"Enter the number of elements to sort: ";
     std:: cin>>num;
@@ -35,7 +35,7 @@ int main()
     std:: cout<<std:: endl;
     for(i=0;i<num;i++)
     {
-        std:: cout<<" "<<*(p+i);
+        std:: cout<<*(p+i)<<"\t";
     }
     delete [] p;
     return 0;
