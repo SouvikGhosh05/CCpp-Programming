@@ -29,7 +29,7 @@ void SelectionSort(int A[],int n)
 
 int main()
 {
-    int *p, arr, num ,i;
+    int *p, num ,i;
     p=(int*) malloc(num * sizeof(int));
     printf("Enter the number of elements to sort: ");
     scanf("%d",&num);
