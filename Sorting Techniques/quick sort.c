@@ -9,42 +9,49 @@ void swap(int *x, int *y)
     *y=temp;
 }
 
-void BubbleSort(int A[],int n)
+int partition(int A[], int l, int h)
 {
-    int i , j, flag;
-
-    for(i=0 ; i<n-1;i++)
-    {   flag=0;
-
-        for(j=0; j<n-1-i ;j++)
+    int pivot= A[h];
+    int i=l-1;
+    
+    for (int j = l; j < h; j++) 
+    {
+        if (A[j] <= pivot) 
         {
-            if(A[j]>A[j+1])
-            {
-                swap(&A[j],&A[j+1]);
-                flag=1;
-            }
-        }
-        if(flag==0)
-        {
-            break;
+            i++;
+            swap(&A[i], &A[j]); 
         }
     }
+    swap(&A[i+1], &A[h]);
+    return (i+1); 
+} 
+
+void QuickSort(int A[], int l, int h)
+{
+    int j;
+
+    if (l < h)
+    {
+        j= partition(A, l, h);
+        QuickSort(A, l, j-1);
+        QuickSort(A, j+1, h);
+    }
+    
 }
 
 int main()
 {
-    int *p, num ,i;
+    int *p, num , i;
     
     printf("Enter the number of elements to sort: ");
     scanf("%d",&num);
-    
     p=(int*) malloc(num * sizeof(int));
     printf("\nPut the numbers: ");
     for(i=0;i<num;i++)
     {
        scanf("%d",(p+i)); 
     }
-    BubbleSort(p,num);
+    QuickSort(p, 0, num-1);
 
     printf("\n");
     for(i=0;i<num;i++)

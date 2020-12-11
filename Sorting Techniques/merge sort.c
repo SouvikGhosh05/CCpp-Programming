@@ -57,9 +57,11 @@ void MergeSort(int A[],int l,int h)
 int main()
 {
     int *p, num, i;
-    p=(int*) malloc(num * sizeof(int));
+    
     printf("Enter the number of elements to sort: ");
     scanf("%d",&num);
+    
+    p=(int*) malloc(num * sizeof(int));
     printf("\nPut the numbers: ");
     for(i=0; i<num; i++)
     {
@@ -72,5 +74,6 @@ int main()
     {
         printf("%d\t",*(p+i));
     }
+    free(p);
     return 0;
 }
