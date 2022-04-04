@@ -1,0 +1,18 @@
+name: C/C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run example code
+      run: |
+        make run file=C_Basics/hello_world.c
+    
+    - name: Create all builds
+      run: |
+        make all
