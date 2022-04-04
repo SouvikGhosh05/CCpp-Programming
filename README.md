@@ -1,7 +1,8 @@
-# CCpp-Programming!**
+# CCpp-Programming
 
-==================================================================
-This repository is all about C and C++ programming.
+![C/C++ CI](https://github.com/SouvikGhosh05/CCpp-Programming/actions/workflows/c-cpp_builds.yml/badge.svg)
+
+This repository is all about C and C++ programming. This also features their use cases and implementations.
 
 To compile all the files, you can use the following command:
 
